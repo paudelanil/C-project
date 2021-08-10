@@ -79,7 +79,6 @@ void gotoxy(int x,int y)
 
                 printf("\n");}
  }
-
  void characterE(int x ,int y)
  {
      int row, col;
@@ -118,9 +117,7 @@ void gotoxy(int x,int y)
          printf("\n");
      }
  }
-
-
-     void characterL(int x,int y)
+ void characterL(int x,int y)
  {
 
 
@@ -142,8 +139,7 @@ void gotoxy(int x,int y)
          printf("\n");
      }
  }
-
-     void characterM(int x,int y)
+ void characterM(int x,int y)
  {
 
 
