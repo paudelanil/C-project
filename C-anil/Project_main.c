@@ -11,6 +11,7 @@ void family_city();
 void tourism_city();
 void Mustang();
 void Chitwan();
+void biratnagar();
 
 void Nepalgunj();
 void Mahendranagar();
@@ -66,6 +67,8 @@ void business()
     case 6:
         Mahendranagar();
         break;
+    case 7:
+        biratnagar();
     default:
         break;
 
@@ -81,6 +84,9 @@ void business()
         if(option == 'Y' || option =='y');
             printf("Yes");
         printf("\n\n");
+        break;
+    case 2:
+
     }
 
 
@@ -195,16 +201,20 @@ void Nepalgunj()
     h[69].rating = 4.5;
     h[69].price = 2633;
 
-    for(i =60;i<70;i++)
+   printf("Loading");
+    for(i=0;i<5;i++){
+        printf(".\t");
+        Sleep(100);
+    }
+    printf("\nSN.\tHOTELS\t\t\t\tRATING\t\t\tCOST");
+        for(i=60;i<70;i++)
     {
-
-
-
-        printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f",n,h[i].ch,h[i].rating,h[i].price);
-        n++;
+        Sleep(500);
+        printf("\n\%d\t%-30s%.1f\t\t\t%0.1f",n,h[i].ch,h[i].rating,h[i].price);
         printf("\n");
+        n++;
 
-        }
+    }
 
 
     }
@@ -242,14 +252,52 @@ void Mustang()
     strcpy(h[39].ch,"Red house ");
     h[39].rating = 4.4;
     h[39].price = 1000;
-    for(i =30;i<40;i++)
+    printf("Loading");
+    for(i=0;i<5;i++){
+        printf(".\t");
+        Sleep(100);
+    }
+    printf("\nSN.\tHOTELS\t\t\t\tRATING\t\t\tCOST");
+        for(i=30;i<40;i++)
     {
-                printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t PRICE: %.1f",n,h[i].ch,h[i].rating,h[i].price);
-
+        Sleep(500);
+        printf("\n\%d\t%-30s%.1f\t\t\t%0.1f",n,h[i].ch,h[i].rating,h[i].price);
         printf("\n");
         n++;
+
+    }
+
+}
+void biratnagar()
+{
+    int i,j=0,n=1;
+    char hotels[10][20] = {"Marriot","Parriotohng","Harrifasdot","Garridsfot","Jarrfadsfafiot"};
+    float rating [5]={4.5,6.4,5.6,7.8,5.9};
+    int price[5]={1000,900,2000,800,789};
+    for(i=80;i<85;i++){
+    strcpy(h[i].ch,hotels[j]);
+    h[i].rating = rating[j];
+    h[i].price = price[j];
+    j++;
+
+    }
+    printf("Loading");
+    for(i=0;i<5;i++){
+        printf(".\t");
+        Sleep(100);
+    }
+    printf("\nSN.\t\t\tHOTELS\t\t\t\tRATING\t\t\tCOST");
+        for(i=80;i<85;i++)
+    {
+        Sleep(500);
+        printf("\n\%d\t%-30s%.1f\t\t\t%0.1f",n,h[i].ch,h[i].rating,h[i].price);
+        printf("\n");
+        n++;
+
+
     }
 }
+
 void Chitwan()
 {
     int i,n=1;
@@ -285,12 +333,20 @@ void Chitwan()
     h[49].rating= 4.5;
     h[49].price= 20789;
 
-    for(i =40;i<50;i++)
+    printf("Loading");
+    for(i=0;i<5;i++){
+        printf(".\t");
+        Sleep(100);
+    }
+    printf("\nSN.\t\t\tHOTELS\t\t\t\tRATING\t\t\tCOST");
+        for(i=40;i<50;i++)
     {
-                printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t PRICE: %.1f",n,h[i].ch,h[i].rating,h[i].price);
-
+        Sleep(500);
+        printf("\n\%d\t%-30s%.1f\t\t\t%0.1f",n,h[i].ch,h[i].rating,h[i].price);
         printf("\n");
         n++;
+
+
     }
 
 }
@@ -337,12 +393,20 @@ void Mahendranagar()
     h[79].rating = 4.0;
     h[79].price = 10714.0;
 
-    for(i =70;i<80;i++)
+   printf("Loading");
+    for(i=0;i<5;i++){
+        printf(".\t");
+        Sleep(100);
+    }
+    printf("\nSN.\t\t\tHOTELS\t\t\t\tRATING\t\t\tCOST");
+        for(i=70;i<80;i++)
     {
-                printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t PRICE: %.1f",n,h[i].ch,h[i].rating,h[i].price);
-
+        Sleep(500);
+        printf("\n\%d\t%-30s%.1f\t\t\t%0.1f",n,h[i].ch,h[i].rating,h[i].price);
         printf("\n");
         n++;
+
+
     }
 }
 
