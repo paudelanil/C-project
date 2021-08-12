@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1628577012 source:c:\users\hp envy\desktop\c project\c-project\c-anil\display.c
-	<windows.h>
-	<stdio.h>
-
-1628576787 source:c:\users\hp envy\desktop\c project\c-project\c-anil\main.c
-	<stdio.h>
-	<stdlib.h>
-
