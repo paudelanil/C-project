@@ -1,4 +1,4 @@
-// jankpur, itahari ko hotels haru  add garna baki xa hai
+
 #include<stdio.h>
 #include<windows.h>
 #include<string.h>
