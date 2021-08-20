@@ -11,6 +11,10 @@ void tourism();
 void business_city();
 void family_city();
 void tourism_city();
+
+void Kathmandu();
+void Pokhara();
+
 void Mustang();
 void Chitwan();
 
@@ -64,6 +68,9 @@ void business()
     scanf("%d", &b_city);
     switch (b_city)
     {
+    case 1:
+        Kathmandu();
+        break;
     case 5:
         Nepalgunj();
         break;
@@ -100,6 +107,9 @@ void tourism()
     scanf("%d", &option);
     switch (option)
     {
+    case 2:
+        Pokhara();
+        break;
     case 3:
         Chitwan();
         break;
@@ -156,6 +166,113 @@ void family_city()
     printf("\n 9. Itahari");
     printf("\n 10. Mustang");
 }
+
+void Kathmandu()
+{
+    int i, n = 1;
+
+    strcpy(h[0].ch, "Hotel Himalaya");
+    h[0].rating = 4.1;
+    h[0].price = 8209;
+
+    strcpy(h[1].ch, "The Everest Hotel");
+    h[1].rating = 4.1;
+    h[1].price = 6412;
+
+    strcpy(h[2].ch, "Peace and Joy Guest House");
+    h[2].rating = 4.8;
+    h[2].price = 1781;
+
+    strcpy(h[3].ch, "Hotel Manohara");
+    h[3].rating = 3.7;
+    h[3].price = 1776;
+
+    strcpy(h[4].ch, "Hyatt Regency Kathmandu");
+    h[4].rating = 4.5;
+    h[4].price = 12546;
+
+
+    strcpy(h[5].ch, "The Soaltee Kathmandu");
+    h[5].rating = 4.5;
+    h[5].price = 10628;
+
+    strcpy(h[6].ch, "Radisson Hotel Kathmandu");
+    h[6].rating = 4.3;
+    h[6].price = 8454;
+
+    strcpy(h[7].ch, "The Dwarika's Hotel");
+    h[7].rating = 4.5;
+    h[7].price = 25571;
+
+    strcpy(h[8].ch, "Hotel Thamel");
+    h[8].rating = 4.0;
+    h[8].price = 3444;
+
+    strcpy(h[9].ch, "Hotel Yak & Yeti");
+    h[9].rating = 4.3;
+    h[9].price = 6379;
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f", n, h[i].ch, h[i].rating, h[i].price);
+        n++;
+        printf("\n");
+    }
+}
+
+void Pokhara()
+{
+    int i, n = 1;
+
+    strcpy(h[10].ch, "Hotel Pokhara Grande");
+    h[10].rating = 4.2;
+    h[10].price = 8976;
+
+    strcpy(h[11].ch, "The Fulbari Resort & Spa");
+    h[11].rating = 4.3;
+    h[11].price = 5555;
+
+    strcpy(h[12].ch, "Waterfront Resort by KGH Group");
+    h[12].rating = 4.2;
+    h[12].price = 8398;
+
+    strcpy(h[13].ch, "Sunshine Resort Pokhara");
+    h[13].rating = 4.4;
+    h[13].price = 10687;
+
+    strcpy(h[14].ch, "Bodhi Suites Boutique");
+    h[14].rating = 4.1;
+    h[14].price = 5842;
+
+
+    strcpy(h[15].ch, "Lake View Resort");
+    h[15].rating = 4.2;
+    h[15].price = 4342;
+
+    strcpy(h[16].ch, "New Summit Guest House");
+    h[16].rating = 4.9;
+    h[16].price = 1425;
+
+    strcpy(h[17].ch, "Hotel Lake Shore");
+    h[17].rating = 4.5;
+    h[17].price = 3264;
+
+    strcpy(h[18].ch, "Dahlia Boutique Hotel");
+    h[18].rating = 4.2;
+    h[18].price = 4884;
+
+    strcpy(h[19].ch, "Tuki Resort");
+    h[19].rating = 4.1;
+    h[19].price = 2672;
+
+    for (i = 10; i < 20; i++)
+    {
+        printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f", n, h[i].ch, h[i].rating, h[i].price);
+        n++;
+        printf("\n");
+    }
+}
+
 
 void Nepalgunj()
 {
