@@ -21,6 +21,9 @@ void Chitwan();
 void Nepalgunj();
 void Mahendranagar();
 //void birgunj();
+
+void sort_price(int);
+
 struct hotels
 {
     char ch[50];
@@ -218,6 +221,19 @@ void Kathmandu()
         n++;
         printf("\n");
     }
+    //FOR SORTING BY PRICE
+    printf("Press s to sort by price or press any key to continue:\n");
+    char sort;
+    int initial = 0;
+    scanf(" %c", &sort);
+    switch (sort)
+    {
+    case 's':
+        sort_price(initial);
+        break;
+    default:
+        break;
+    }
 }
 
 void Pokhara()
@@ -270,6 +286,19 @@ void Pokhara()
         printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f", n, h[i].ch, h[i].rating, h[i].price);
         n++;
         printf("\n");
+    }
+    //FOR SORTING BY PRICE
+    printf("Press s to sort by price or press any key to continue:\n");
+    char sort;
+    int initial = 10;
+    scanf(" %c", &sort);
+    switch (sort)
+    {
+    case 's':
+        sort_price(initial);
+        break;
+    default:
+        break;
     }
 }
 
@@ -325,43 +354,16 @@ void Nepalgunj()
         printf("\n");
 
     }
+    //FOR SORTING BY PRICE
     printf("Press s to sort by price or press any key to continue:\n");
-    char sort, exc[100];
-    int j;
-    float a=0,b=0;
+    char sort;
+    int initial = 60;
     scanf(" %c", &sort);
     switch (sort)
     {
     case 's':
-        for (i = 60; i < 70; i++)
-        {    
-            for (j = i + 1; j < 70; j++)
-            {
-                if (h[i].price > h[j].price)
-                {
-                    strcpy(exc, h[i].ch);
-                    strcpy(h[i].ch, h[j].ch);
-                    strcpy(h[j].ch, exc);
-
-
-                    b = h[i].rating;
-                    h[i].rating = h[j].rating;
-                    h[j].rating = b;
-                    
-                    a = h[i].price;
-                    h[i].price = h[j].price;
-                    h[j].price = a;
-                }
-            }
-        }
-        n = 1;
-        for (i = 60; i < 70; i++)
-        {
-            printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f", n, h[i].ch, h[i].rating, h[i].price);
-            n++;
-            printf("\n");
-
-        }
+        sort_price(initial);
+        break;
     default:
         break;
     }
@@ -408,6 +410,19 @@ void Mustang()
         printf("\n");
         n++;
     }
+    //FOR SORTING BY PRICE
+    printf("Press s to sort by price or press any key to continue:\n");
+    char sort;
+    int initial = 30;
+    scanf(" %c", &sort);
+    switch (sort)
+    {
+    case 's':
+        sort_price(initial);
+        break;
+    default:
+        break;
+    }
 }
 void Chitwan()
 {
@@ -428,7 +443,7 @@ void Chitwan()
     strcpy(h[44].ch, "Hotel National Park Sauraha");
     h[44].rating = 4.3;
     h[44].price = 1187;
-    strcpy(h[45].ch, "Meghauli Serai, A Taj Safari - Chitwan National Park");
+    strcpy(h[45].ch, "Meghauli Serai, A Taj Safari");
     h[45].rating = 4.6;
     h[45].price = 45775;
     strcpy(h[46].ch, "Barahi Jungle Lodge");
@@ -450,6 +465,19 @@ void Chitwan()
 
         printf("\n");
         n++;
+    }
+    //FOR SORTING BY PRICE
+    printf("Press s to sort by price or press any key to continue:\n");
+    char sort;
+    int initial = 40;
+    scanf(" %c", &sort);
+    switch (sort)
+    {
+    case 's':
+        sort_price(initial);
+        break;
+    default:
+        break;
     }
 
 }
@@ -503,6 +531,19 @@ void Mahendranagar()
         printf("\n");
         n++;
     }
+    //FOR SORTING BY PRICE
+    printf("Press s to sort by price or press any key to continue:\n");
+    char sort;
+    int initial = 70;
+    scanf(" %c", &sort);
+    switch (sort)
+    {
+    case 's':
+        sort_price(initial);
+        break;
+    default:
+        break;
+    }
 }
 
 void SetColor(int ForgC)
@@ -521,4 +562,41 @@ void SetColor(int ForgC)
         SetConsoleTextAttribute(hStdOut, wColor);
     }
     return;
+}
+
+void sort_price(int initial)
+{
+    int i, j, n = 1;
+    float a, b;
+    char exc[50];
+    for (i = initial; i < initial+10; i++)
+    {
+        for (j = i + 1; j < initial+10; j++)
+        {
+            if (h[i].price > h[j].price)
+            {
+                strcpy(exc, h[i].ch);
+                strcpy(h[i].ch, h[j].ch);
+                strcpy(h[j].ch, exc);
+
+                a = 0;
+                b = 0;
+
+                b = h[i].rating;
+                h[i].rating = h[j].rating;
+                h[j].rating = b;
+
+                a = h[i].price;
+                h[i].price = h[j].price;
+                h[j].price = a;
+            }
+        }
+    }
+    for (i = initial; i < initial + 10; i++)
+    {
+        printf("\n\t\t %d.%s\n\t\t RATING: %.1f/5.0 \n\t\t Price: NPR %.1f", n, h[i].ch, h[i].rating, h[i].price);
+        n++;
+        printf("\n");
+
+    }
 }
